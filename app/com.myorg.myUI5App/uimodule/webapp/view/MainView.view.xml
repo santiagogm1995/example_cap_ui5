@@ -1,0 +1,43 @@
+<mvc:View controllerName="com.myorg.myUI5App.controller.MainView" displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <App id="idAppControl">
+    <pages>
+      <Page title="{i18n>title}">
+        <content>
+          <Table id="idProductsTable" inset="false" items="{
+			path: '/BooksCollection',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+            <headerToolbar>
+              <OverflowToolbar>
+                <content>
+                  <Title text="Books" level="H2"/>
+                </content>
+              </OverflowToolbar>
+            </headerToolbar>
+            <infoToolbar>
+              <OverflowToolbar>
+                <Label text="Wide range of available products"/>
+              </OverflowToolbar>
+            </infoToolbar>
+            <columns>
+              <Column width="12em">
+                <Text text="Title" />
+              </Column>
+            </columns>
+            <items>
+              <ColumnListItem>
+                <cells>
+                  <Text text="{title}" />
+                </cells>
+              </ColumnListItem>
+            </items>
+          </Table>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>
